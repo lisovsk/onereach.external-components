@@ -7,9 +7,9 @@
 <script>
     import * as _ from 'lodash';
 
-    import {validators} from '_validators';
+    // import {validators} from '_validators';
     
-    const {required, jsExpressionNonEmptyString, validateIf} = validators;
+    // const {required, jsExpressionNonEmptyString, validateIf} = validators;
 
     export default {};
 
