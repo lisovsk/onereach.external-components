@@ -1,83 +1,57 @@
 <template>
-    <div class="external-components-wrapper">
-        <div class="email-wrapper">
-            <email :schema="schema"
-                   :label="template.emailLabel"
-                   :placeholder="template.emailPlaceholder"
-                   :$v="$v">
-            </email>
-        </div>
-        <div class="password-wrapper">
-            <password :schema="schema"
-                      :label="template.passwordLabel"
-                      :placeholder="template.passwordPlaceholder"
-                      :$v="$v">
-            </password>
-        </div>
+    <div>
+        xcvvsdfsdad
     </div>
 </template>
 <script>
-    import * as _ from 'lodash';
-    import {validators} from '_validators';
-    import email from './email.vue';
-    import password from './password.vue';
+import * as _ from 'lodash';
+import { validators } from '_validators';
 
-    const {required, jsExpressionNonEmptyString, validateIf} = validators;
+const { required, jsExpressionNonEmptyString, validateIf } = validators;
 
-    export default {
-        name       : 'editor-test-example',
-        props      : ['template', 'schema', 'step', 'stepId', 'steps', 'readonly'],
-        components : {email, password},
-        computed   : {},
+export default {
+  name: 'editor-test-example',
+  props: ['template', 'schema', 'step', 'stepId', 'steps', 'readonly'],
+  components: {},
+  computed: {},
 
-        created () {
-            console.log('!!!!!!!!!!!!!!', this.$v);
-        },
+  created() {
+    console.log('!!!!!!!!!!!!!!', this.$v);
+  },
 
-        data () {
-            return {};
-        },
+  data() {
+    return {};
+  },
 
-        methods : {},
+  methods: {},
 
-        validations () {
-            return {
-                schema : validator(this.template)
-            };
-        }
-
+  validations() {
+    return {
+      schema: validator(this.template),
     };
+  },
+};
 
-    export const data = (template) => ({
-        email               : '',
-        emailPlaceholder    : template.emailPlaceholder,
-        emailLabel          : template.emailLabel,
-        password            : '',
-        passwordPlaceholder : template.passwordPlaceholder,
-        passwordLabel       : template.passwordLabel,
-    });
+export const data = template => ({
+  //   email: '',
+  //   emailPlaceholder: template.emailPlaceholder,
+  //   emailLabel: template.emailLabel,
+  //   password: '',
+  //   passwordPlaceholder: template.passwordPlaceholder,
+  //   passwordLabel: template.passwordLabel,
+});
 
-    export const validator = (template) => {
-        return {
-            email    : {validateIf : validateIf(template.validateRequired, {required})},
-            password : {validateIf : validateIf(template.validateRequired, {required})},
-        };
-    };
+export const validator = template => {
+  return {};
+};
 
-    export const meta = {
-        name    : 'test-external-component',
-        type    : 'onereach-studio-form-editor',
-        version : '1.0'
-    };
+export const meta = {
+  name: 'test-shcedule',
+  type: 'onereach-studio-form-editor',
+  version: '1.0',
+};
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
-    @import '../scss/colors';
-
-</style>
-
-
-<style lang="scss" rel="stylesheet/scss">
-    @import '../scss/colors';
-
+// @import '../scss/colors';
 </style>
