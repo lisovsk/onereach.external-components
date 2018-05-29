@@ -14,10 +14,7 @@
     export default {};
 
     export const data = (template) => ({
-        isSingleExit            : template.isSingleExit,
-        conditionRuleHasDataOut : template.conditionRuleHasDataOut,
-        conditionExits          : template.conditionExits,
-        singleExitRules         : template.singleExitRules
+        isSingleExit            : false,
     });
 
     export const validator = (template) => {
